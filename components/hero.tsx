@@ -25,11 +25,7 @@ export default function Hero() {
           style={{ y: contentY }}
           className="mx-auto max-w-3xl text-center"
         >
-          <GlowText
-            as="p"
-            text="Portfolio of Machine Learning Engineer"
-            className="text-sm md:text-[0.95rem] tracking-[0.25em]"
-          />
+          <GlowText as="p" text="Machine Learning Engineer" className="text-sm md:text-[0.95rem] tracking-[0.25em]" />
           <h1
             className="mt-3 text-pretty text-3xl md:text-5xl font-bold tracking-tight"
             style={{
