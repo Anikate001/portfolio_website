@@ -14,7 +14,7 @@ Any changes you make to your deployed app will be automatically pushed to this r
 
 Your project is live at:
 
-**[https://vercel.com/konohagurerules-4990s-projects/v0-portfolio-website](https://vercel.com/konohagurerules-4990s-projects/v0-portfolio-website)**
+https://anikate.vercel.app
 
 ## Build your app
 
