@@ -5,14 +5,64 @@ import { Button } from "@/components/ui/button"
 
 const projects = [
   {
-    title: "Few-Shot Multimodal Classifier",
-    desc: "Built a model that classifies images & text using few-shot learning. Combines multimodal embeddings for flexible AI tasks.",
-    href: "https://github.com/Anikate001/-Few-Shot-Multimodal-Classifier-Image-Text-",
-  },
-  {
     title: "Real-Time Object Detection",
     desc: "YOLOv5-based real-time object detection system, trained and deployed with a custom dataset for accurate detection.",
     href: "https://github.com/Anikate001/real-time-object-detection",
+  },
+  {
+    title: "Few-Shot Multimodal Classifier",
+    desc: "Built a model that classifies images & text using few-shot learning. Combines multimodal embeddings for flexible AI tasks.",
+    href: "https://github.com/Anikate001/Few-Shot-Multimodal-Classifier",
+  },
+  {
+    title: "Fake News Detection",
+    desc: "NLP-based model for detecting and classifying fake news articles using text analysis and machine learning techniques.",
+    href: "https://github.com/Anikate001/Fake_News_Detection",
+  },
+  {
+    title: "Movie Recommendation System",
+    desc: "Collaborative filtering and content-based recommendation engine using cosine similarity and matrix factorization.",
+    href: "https://github.com/Anikate001/Movie-Recommendation-System",
+  },
+  {
+    title: "Credit Card Fraud Detection",
+    desc: "ML model for detecting fraudulent transactions using classification techniques and anomaly detection algorithms.",
+    href: "https://github.com/Anikate001/CREDIT_CARD_FRAUD_DETECTION",
+  },
+  {
+    title: "Stock Prediction Model",
+    desc: "Time-series forecasting model for predicting stock prices using LSTM and ensemble learning methods.",
+    href: "https://github.com/Anikate001/Stock_Prediction_Model",
+  },
+  {
+    title: "ReadySetHire",
+    desc: "Job recommendation and recruitment matching platform using collaborative filtering and profile analysis.",
+    href: "https://github.com/Anikate001/ReadySetHire",
+  },
+  {
+    title: "Plant Disease Recognition Model",
+    desc: "Deep learning model for identifying plant diseases via image classification using CNN architectures.",
+    href: "https://github.com/Anikate001/Plant-Disease-Recognition-Model",
+  },
+  {
+    title: "Autonomous Retail Shelf Assistant",
+    desc: "Computer vision system for monitoring retail shelves, detecting empty spots, and alerting staff for restocking.",
+    href: "https://github.com/Anikate001/Autonomous-Retail-Shelf-Assistant",
+  },
+  {
+    title: "Portfolio Website",
+    desc: "Personal portfolio website showcasing ML projects, certifications, and professional experience with interactive UI.",
+    href: "https://github.com/Anikate001/portfolio_website",
+  },
+  {
+    title: "Fine-tune Mistral 7B with QLoRA",
+    desc: "Efficient fine-tuning of Mistral 7B using QLoRA (Quantized LoRA) for domain-specific language tasks.",
+    href: "https://github.com/Anikate001/Fine-tune-Mistral-7B-with-QLoRA",
+  },
+  {
+    title: "RAG Chatbot",
+    desc: "Retrieval-Augmented Generation chatbot combining LLMs with vector databases for intelligent information retrieval.",
+    href: "https://github.com/Anikate001/rag-chatbot",
   },
 ]
 
