@@ -12,9 +12,9 @@ import { Suspense } from "react"
 import ScrollProgress from "@/components/scroll-progress"
 
 export const metadata: Metadata = {
-  title: "v0 App",
-  description: "Created with v0",
-  generator: "v0.app",
+  title: "Anikate Sharma | GenAI and ML Engineer",
+  description:
+    "Anikate Sharma builds agentic AI, RAG and fine-tuned LLM systems: NEXUS multi-agent research, DocuMind RAG, Mistral-7B QLoRA.",
 }
 
 export default function RootLayout({

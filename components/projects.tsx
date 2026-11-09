@@ -1,18 +1,41 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
 
-const projects = [
+type Project = {
+  title: string
+  desc: string
+  tags: string[]
+  href: string
+  demo?: { label: string; href: string }
+}
+
+const projects: Project[] = [
   {
-    title: "Few-Shot Multimodal Classifier",
-    desc: "Built a model that classifies images & text using few-shot learning. Combines multimodal embeddings for flexible AI tasks.",
-    href: "https://github.com/Anikate001/-Few-Shot-Multimodal-Classifier-Image-Text-",
+    title: "NEXUS: Multi-Agent Research Platform",
+    desc: "Five LangGraph agents (Planner, Researcher, Analyst, Writer, Critic) turn a question into a cited research report, with a Critic-driven revision loop and optional human approval. Benchmarked at 10/10 completed runs, 22 s median, 12 citations per report.",
+    tags: ["LangGraph", "Gemini", "FastAPI", "WebSockets", "PostgreSQL", "Redis", "Docker"],
+    href: "https://github.com/Anikate001/Multi-Agent-System-Architechture",
   },
   {
-    title: "Real-Time Object Detection",
-    desc: "YOLOv5-based real-time object detection system, trained and deployed with a custom dataset for accurate detection.",
-    href: "https://github.com/Anikate001/real-time-object-detection",
+    title: "DocuMind: RAG Chatbot for PDFs",
+    desc: "Ask questions about your PDFs and get answers with citations, or a refusal when the documents don't say. An evaluation harness on a 40-question golden set showed 500-word chunks were losing evidence; retuning raised answer correctness from 53% to 90%.",
+    tags: ["RAG", "pgvector", "Supabase", "Sentence-Transformers", "Groq", "Streamlit"],
+    href: "https://github.com/Anikate001/DocuMind-rag-chatbot",
+    demo: { label: "Live demo", href: "https://documind-anikate.streamlit.app" },
+  },
+  {
+    title: "Mistral-7B QLoRA Fine-Tune",
+    desc: "Fine-tuned Mistral-7B-Instruct for customer support with 4-bit QLoRA on a free T4 (0.58% of parameters trained). On 81 held-out questions, ROUGE-L rose 59%, while an LLM judge still preferred the base model's fuller answers: a trade-off two metrics revealed.",
+    tags: ["QLoRA", "PEFT", "TRL", "bitsandbytes", "MLflow", "Hugging Face"],
+    href: "https://github.com/Anikate001/-Fine-tune-Mistral-7B-with-QLoRA",
+    demo: { label: "Model on Hugging Face", href: "https://huggingface.co/Anikate0/mistral-7b-bitext-support-qlora" },
+  },
+  {
+    title: "AI Job Application Agent",
+    desc: "A LangGraph agent that fills job applications on Workday, Greenhouse and Lever with Playwright, pausing for human approval before anything is submitted.",
+    tags: ["LangGraph", "Playwright", "OpenAI", "SQLite"],
+    href: "https://github.com/Anikate001/AI-JOB-APPLICATION-AGENT---TCS",
   },
 ]
 
@@ -37,15 +60,34 @@ export default function Projects() {
             >
               <h3 className="text-lg md:text-xl font-semibold">{p.title}</h3>
               <p className="text-sm md:text-base text-muted-foreground mt-2">{p.desc}</p>
-              <div className="mt-4">
-                <Button
-                  asChild
-                  className="bg-[var(--glass)] border border-[var(--glass-edge)] hover:bg-[var(--glass-strong)] hover:shadow-[0_0_24px_var(--neon)] hover:animate-[pulseGlow_1.6s_ease-in-out_infinite]"
+              <ul className="mt-3 flex flex-wrap gap-2" aria-label="Technologies">
+                {p.tags.map((tag) => (
+                  <li key={tag} className="text-xs rounded-full border border-[var(--glass-edge)] px-2.5 py-1 text-muted-foreground">
+                    {tag}
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-4 flex flex-wrap gap-3">
+                <a
+                  href={p.href}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  aria-label={`Open ${p.title} on GitHub`}
+                  className="inline-flex items-center rounded-md border border-[var(--glass-edge)] px-4 py-2 text-sm font-medium text-foreground transition hover:border-[var(--neon)] hover:shadow-[0_0_24px_var(--neon)]"
                 >
-                  <a href={p.href} target="_blank" rel="noreferrer noopener" aria-label={`Open ${p.title} on GitHub`}>
-                    GitHub
+                  GitHub
+                </a>
+                {p.demo && (
+                  <a
+                    href={p.demo.href}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    aria-label={`${p.demo.label}: ${p.title}`}
+                    className="inline-flex items-center rounded-md bg-[var(--neon)] px-4 py-2 text-sm font-medium text-black transition hover:shadow-[0_0_24px_var(--neon)]"
+                  >
+                    {p.demo.label}
                   </a>
-                </Button>
+                )}
               </div>
             </motion.article>
           ))}
